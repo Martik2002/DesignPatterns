@@ -1,0 +1,29 @@
+﻿## .NET Core / Visual Studio / Rider .gitignore
+
+# Build outputs
+bin/
+obj/
+out/
+
+# IDE - JetBrains Rider
+.idea/
+*.sln.DotSettings.user
+*.user
+.rider/
+
+# IDE - Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Docker
+.dockerignore
+
+# User-specific files
+*.log
