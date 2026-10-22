@@ -1,6 +1,0 @@
-﻿services:
-  singletonpattern:
-    image: singletonpattern
-    build:
-      context: .
-      dockerfile: SingletonPattern/Dockerfile

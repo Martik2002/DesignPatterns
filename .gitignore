@@ -26,4 +26,5 @@ Thumbs.db
 .dockerignore
 
 # User-specific files
-*.log
+*.log[Bb]in/
+[Oo]bj/
