@@ -1,5 +1,7 @@
 # DesignPatterns
 
+[![Build](https://github.com/Martik2002/DesignPatterns/actions/workflows/build.yml/badge.svg)](https://github.com/Martik2002/DesignPatterns/actions/workflows/build.yml)
+
 Practical implementations of classic design patterns in C# / .NET 9. Each pattern is a small, self-contained console project built around a realistic use case rather than abstract `Foo`/`Bar` examples.
 
 ## Patterns
