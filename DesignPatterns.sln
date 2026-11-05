@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryPattern", "src\Facto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingletonPattern", "src\SingletonPattern\SingletonPattern.csproj", "{B8BF5BF5-E4BB-43BF-A137-34351EDC3FB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SagaPattern", "src\SagaPattern\SagaPattern.csproj", "{D26C99CB-7413-4AEB-873F-3F086B0FF569}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,9 +28,14 @@ Global
 		{B8BF5BF5-E4BB-43BF-A137-34351EDC3FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8BF5BF5-E4BB-43BF-A137-34351EDC3FB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8BF5BF5-E4BB-43BF-A137-34351EDC3FB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D26C99CB-7413-4AEB-873F-3F086B0FF569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D26C99CB-7413-4AEB-873F-3F086B0FF569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D26C99CB-7413-4AEB-873F-3F086B0FF569}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D26C99CB-7413-4AEB-873F-3F086B0FF569}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BD200E34-04AD-4F27-B13C-209BF0C2407F} = {FDEDABDA-EEEB-495F-9CAD-8FB5D941FBF2}
 		{B8BF5BF5-E4BB-43BF-A137-34351EDC3FB7} = {FDEDABDA-EEEB-495F-9CAD-8FB5D941FBF2}
+		{D26C99CB-7413-4AEB-873F-3F086B0FF569} = {FDEDABDA-EEEB-495F-9CAD-8FB5D941FBF2}
 	EndGlobalSection
 EndGlobal
