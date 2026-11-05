@@ -10,6 +10,7 @@ Practical implementations of classic design patterns in C# / .NET 9. Each patter
 |---------|----------|----------|---------|
 | **Singleton** | Creational | Thread-safe in-memory cache shared across the whole application | [`src/SingletonPattern`](src/SingletonPattern) |
 | **Factory Method** | Creational | Notification dispatcher for SMS, Email, WhatsApp and Telegram | [`src/FactoryPattern`](src/FactoryPattern) |
+| **Saga** | Behavioral / Distributed | Order placement across inventory, payment and shipping, with compensating transactions | [`src/SagaPattern`](src/SagaPattern) |
 
 More patterns are being added over time.
 
@@ -31,6 +32,19 @@ var sms = MessageFactory.CreateService(MessageType.Sms);
 sms.Send("+1234567890", "Your verification code is 5542.");
 ```
 
+### Saga — Order Placement
+
+An order has to reserve stock, charge the card, book a shipment and send a confirmation. Those live in different services, so there is no shared transaction to roll back. `SagaOrchestrator<TContext>` runs each `ISagaStep` in order, remembers what committed, and compensates the completed steps in reverse order as soon as one of them fails — releasing the reservation, refunding the payment, cancelling the shipment.
+
+```csharp
+var result = await new SagaOrchestrator<OrderContext>("PlaceOrder")
+    .AddStep(new ReserveInventoryStep(inventoryService))
+    .AddStep(new ChargePaymentStep(paymentService))
+    .AddStep(new CreateShipmentStep(shippingService))
+    .AddStep(new SendConfirmationStep(notificationService))
+    .ExecuteAsync(order);
+```
+
 ## Running
 
 Requires the [.NET 9 SDK](https://dotnet.microsoft.com/download).
@@ -41,6 +55,7 @@ cd DesignPatterns
 
 dotnet run --project src/SingletonPattern
 dotnet run --project src/FactoryPattern
+dotnet run --project src/SagaPattern
 ```
 
 ## License
